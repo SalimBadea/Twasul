@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvUser"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:backgroundTint="@android:color/transparent"
+    app:layout_constraintCircleRadius="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUserProfile"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/splash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        style="@style/InputsThemeDark"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="start"
+        android:padding="5dp"
+        android:text="Salim"
+        android:textColor="@color/brown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivUserProfile"
+        app:layout_constraintTop_toTopOf="@id/ivUserProfile" />
+
+    <TextView
+        android:id="@+id/tvLastMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="start"
+        android:padding="5dp"
+        android:text="Salim"
+        android:textColor="@color/colorAccent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivUserOffline"
+        app:layout_constraintTop_toBottomOf="@id/tvUserName" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUserOnline"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/splash"
+        app:civ_border_color="@color/green"
+        app:civ_border_width="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/ivUserProfile"
+        app:layout_constraintEnd_toEndOf="@id/ivUserProfile"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUserOffline"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/splash"
+        android:visibility="invisible"
+        app:civ_border_color="@color/grey"
+        app:civ_border_width="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/ivUserProfile"
+        app:layout_constraintEnd_toEndOf="@id/ivUserProfile"/>
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/grey"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivUserOnline" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
